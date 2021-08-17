@@ -14,5 +14,7 @@ else
 }
 console.log('UC1:checking for value 400088: ')
 PinCheck(400088);
-console.log('UC2 :Checking when the pincode begin with alphabet:')
+console.log('UC2 :Checking when the pincode begin with alphabet:');
 PinCheck('A400088');
+console.log('UC3-Checking when the pincode end with alphabet:');
+PinCheck('400088B');
