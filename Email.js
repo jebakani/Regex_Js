@@ -1,7 +1,7 @@
 function EmailCheck(email)
 {
     //check mandatory first part
-let regpattern=RegExp('^[a-zA-Z]{3}([\\- \\+ _\\.]*[a-zA-Z0-9]+)*@[a-zA-Z0-9]+\\.[a-z]{2,3}');
+let regpattern=RegExp('^[a-zA-Z]{3}([\\- \\+ _\\.]*[a-zA-Z0-9]+)*@[a-zA-Z0-9]+\\.[a-z]{2,3}(\\.[a-zA-Z]{2,4}){0,1}$');
 if(regpattern.test(email))
 {
     console.log('Email is valid');
@@ -19,3 +19,5 @@ console.log('UC3-Checking the mandatory 3 part:');
 EmailCheck('abc@gmai.com');
 console.log('UC4-Checking the side part');
 EmailCheck('abc.xyx@gmai.com');
+console.log('UC5-Checking the TLD');
+EmailCheck('abc.xyz@gmail.com.in');
