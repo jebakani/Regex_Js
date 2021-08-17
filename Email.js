@@ -1,5 +1,6 @@
 function EmailCheck(email)
 {
+    //check mandatory first part
 let regpattern=RegExp('^[a-zA-Z]{3}[1-bA-Z0-9]');
 if(regpattern.test(email))
 {
