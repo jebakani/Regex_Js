@@ -1,7 +1,7 @@
 function EmailCheck(email)
 {
     //check mandatory first part
-let regpattern=RegExp('^[a-zA-Z]{3}[1-bA-Z0-9]');
+let regpattern=RegExp('^[a-zA-Z]{3}@[a-zA-Z]+$');
 if(regpattern.test(email))
 {
     console.log('Email is valid');
@@ -13,3 +13,5 @@ else
 }
 console.log('UC1-Checking mandatory condition:');
 EmailCheck('abc@gmail.com');
+console.log('UC2-Checking the mandatory second part:');
+EmailCheck('abc@gmail');
